@@ -1,0 +1,42 @@
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 800px) {
+    html,
+    body {
+        width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.text-image {
+    position: absolute;
+    color: #804;
+    width: 100%;
+    padding-left: 7%;
+    top: 3vh;
+}
+
+.header {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 30px;
+}
+
+.links {
+    font-family: 'Homemade Apple', cursive;
+    border-style: ridge none none;
+    border-width: 1px;
+    border-color: #804;
+    font-size: 20px;
+    line-height: 48px;
+    margin-top: 15vh;
+}

@@ -1,0 +1,114 @@
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #234;
+}
+
+@media screen and (min-width: 800px) {
+    html,
+    body {
+        width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.error {
+    color: #f00;
+}
+
+.top-image {
+    width: 100%;
+    position: relative;
+    margin-bottom: 3vh;
+}
+
+.header-base {
+    position: absolute;
+    color: #804;
+    width: 100%;
+    padding-left: 4%;
+    top: 2vh;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.header-base-small {
+    position: absolute;
+    color: #804;
+    width: 100%;
+    padding-left: 4%;
+    top: 0vh;
+    font-family: 'Homemade Apple', cursive;
+}
+
+@media screen and (min-width: 451px) {
+    .header-base-small {
+        display: none;
+    }
+
+    .nav__item {
+    font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header-base {
+        display: none;
+    }
+}
+
+.nav {
+    margin-bottom: 4vh;
+}
+
+.nav__item {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 450px) {
+    .nav__item {
+    font-size: 24px;
+    }
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 1.5em;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.posts {
+    padding-left: 7px;
+}
+
+.heart {
+    color: #804;
+}
+
+.welcm_msg {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 20px;
+    color: #234;
+    margin-top: 10vh;
+}
+
+.msg {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 18px;
+    color: #234;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+}
+
+.pretty {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 20px;
+    color: #234;
+}
