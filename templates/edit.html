@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Edit post</h2>
+    </div>
+    <div class="col-xs-12">
+        <h3>{{contributor}}</h3>
+    </div>
+</div>
+<form method="post">
+    <div class="error">{{error}}</div>
+    <div class="form-group">
+        <label><h4>Book title</h4></label>
+        <input type="text" class="form-control" name="book_title" value="{{book_title}}">
+    </div>
+    <div class="form-group">
+        <label><h4>Book author</h4></label>
+        <input type="text" class="form-control" name="book_author" value="{{book_author}}">
+    </div>
+    <div class="form-group">
+        <label><h4>Quote</h4></label>
+        <textarea class="form-control" name="content">{{content}}</textarea>
+    </div>
+    <input class="btn btn-default" type="submit">
+    <a class="btn btn-default" href="/main" role="button">Cancel</a>
+</form>
+<br><br>
+{% endblock %}

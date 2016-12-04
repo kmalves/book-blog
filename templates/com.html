@@ -1,0 +1,17 @@
+<div class="posts">
+    <div class="row">
+        <div class="col-xs-12">
+            {{c.author}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            {{c.date.strftime("%b %d, %Y")}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            {{c._render_text | safe}}
+        </div>
+    </div>
+</div>

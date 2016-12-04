@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kate's Book Blog</title>
+        <link rel="stylesheet" href="/stylesheets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/base.css">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="/images/header.jpg" class="img-responsive center-block top-image">
+                    <header class="header-base"><h1 class="text-capitalize">istoria</h1><h4>book quotes</h4>
+                    </header>
+                    <header class="header-base-small"><h3 class="text-capitalize">istoria</h3><h6>book quotes</h6>
+                    </header>
+                </div>
+            </div>
+            <div class="row nav"><!-- TODO: add profile page with "my quotes" and "my comments"-->
+                {% if user %}
+                <div class="col-xs-4 nav__item text-center">
+                    <a href="/logout">Logout</a>
+                </div>
+                <div class="col-xs-4 nav__item text-center">
+                    <a href="/newpost">Post</a>
+                </div>
+                <div class="col-xs-4 nav__item text-center">
+                    <a href="/main">Main</a>
+                </div>
+                {% else %}
+                <div class="col-xs-6 nav__item text-center">
+                    <a href="/signup">Register</a>
+                </div>
+                <div class="col-xs-6 nav__item text-center">
+                    <a href="/login">Login</a>
+                </div>
+                {% endif %}
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ post.render() | safe }}
+    <br><br>
+    <div class="row">
+        <div class="col-xs-12 posts text-capitalize text-center pretty">
+            Thanks!
+        </div>
+    </div>
+{% endblock %}

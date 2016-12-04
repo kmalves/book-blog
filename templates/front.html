@@ -1,0 +1,53 @@
+<!doctype html><!--TODO: move the header to a separate file, extend front page from this file, share with login and signup pages-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kate's Book Blog</title>
+        <link rel="stylesheet" href="/stylesheets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/base.css">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="/images/header.jpg" class="img-responsive center-block top-image">
+                    <header class="header-base"><h1 class="text-capitalize">istoria</h1><h4>book quotes</h4>
+                    </header>
+                    <header class="header-base-small"><h3 class="text-capitalize">istoria</h3><h6>book quotes</h6>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="msg">Welcome! This is a read-only zone. Enjoy browsing through the quotes below. If you would like to post, share comments and likes, please register <a href="/signup">here</a>. Thanks for visiting!</div>
+                </div>
+            </div>
+            {% for p in posts %}
+            <div class="posts">
+                <div class="row">
+                    <div class="col-xs-10 text-uppercase">
+                        {{ p.book_title }}
+                    </div>
+                    <div class="col-xs-2 text-center heart">
+                        &#9829; {{ p.likes }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-capitalize">
+                        <em>{{ p.book_author }}</em>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <q>{{ p.content | safe }}</q>
+                    </div>
+                </div>
+            </div>
+            <br><hr><br>
+            {% endfor %}
+        </div>
+    </body>
+</html>

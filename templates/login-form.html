@@ -1,0 +1,43 @@
+<!doctype html><!--TODO: move the header to a separate file, extend login page from this file, share with front and signup pages-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kate's Book Blog</title>
+        <link rel="stylesheet" href="/stylesheets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/base.css">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="/images/header.jpg" class="img-responsive center-block top-image">
+                    <header class="header-base"><h1 class="text-capitalize">istoria</h1><h4>book quotes</h4>
+                    </header>
+                    <header class="header-base-small"><h3 class="text-capitalize">istoria</h3><h6>book quotes</h6>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 left">
+                    <h2>Login</h2>
+                </div>
+            </div>
+            <form method="post">
+                <div class="error">{{error}}</div>
+                <div class="form-group">
+                    <label><h5>Username</h5></label>
+                    <input type="text" class="form-control" name="username" value="{{username}}">
+                </div>
+                <div class="form-group">
+                    <label><h5>Password</h5></label>
+                    <input type="password" class="form-control" name="password" value="">
+                </div>    
+                <input class="btn btn-default" type="submit">
+            </form>
+            <br><br>
+        </div>    
+    </body>
+</html>

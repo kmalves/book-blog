@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if error %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="error" role="alert">{{ error }}</div>
+    </div>
+</div>
+<br>
+{% endif %}
+
+{% if welcm_msg %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="welcm_msg text-center">{{ welcm_msg }}</div>
+    </div>
+</div>
+{% endif %}
+
+{% for p in posts %}
+    {{ p.render() | safe }}
+    <br>
+    <form method="post">
+        <a class="btn btn-default" href="/post/{{p.key().id()}}/comment" role="button">Comments</a>
+        <button type="submit" class="btn btn-default" name="edit" value="{{p.key().id()}}">Edit</button>
+        <button type="submit" class="btn btn-danger" name="remove" value="{{p.key().id()}}">X</button>
+        <button type="submit" class="btn btn-default" name="post_id" value="{{p.key().id()}}">&#9829; Like</button> {{ p.likes }}
+    </form>
+    <br><hr><br>
+{% endfor %}
+{% endblock %}

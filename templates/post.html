@@ -1,0 +1,25 @@
+<div class="posts">
+    <div class="row">
+        <div class="col-xs-6">
+            {{p.contributor}}
+        </div>
+        <div class="col-xs-6 text-right">
+            {{p.date.strftime("%b %d, %Y")}}
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-xs-12 text-uppercase">
+            {{p.book_title}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-capitalize">
+            <em>{{p.book_author}}</em>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <q>{{p._render_text | safe}}</q>
+        </div>
+    </div>
+</div>
